@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<style>
+			.enable-darkmode{      
+				background: #e5e5e5;
+			}
+
+			#dark-filter{
+				top: 0; 
+				left: 0; 
+				width: 100vw; 
+				height: 100vh; 
+		  		position: fixed; 
+				pointer-events: none; 
+				transition: all 0.5s ease; 
+				mix-blend-mode: difference;
+			}
+
+			#dark_mode_button { 
+				background: white; 
+				color: black;  
+
+				/* try to make it look nice */
+				font-size: large; 
+				display: inline-block;
+    			text-decoration: none;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: middle;
+				-ms-touch-action: manipulation;
+				touch-action: manipulation;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				background-image: none;
+				border: 2px solid black;
+				padding: 8px;
+				border-radius: 9px;
+			} 
+
+			/* demo for isolating elements from dark mode (logo, pictures, emojis, etc) */
+			.s-module--post--LdKL1{  
+  				isolation: isolate;
+			}
+
+			/* .title{
+  				isolation: isolate;
+			} */
+
+		</style>
+	</head>
+
+<body>    
+
+	<div class = "dark--module">
+		<div id="dark-filter" ></div> 
+	  	<button id="dark_mode_button" onclick="toggle_button()">dark mode</button> 
+	</div> 
+
+	<!-- demo content. Class LdKL1 and all titles isolated from dark mode   -->
+
+	<!-- <div id="demo content">
+		<div style="outline:none" tabindex="-1" role="group">
+		  <base target="_blank">
+
+			<div class="s-module--header--2utkj">
+			  <h1><a aria-current="page" class="" href="/">A Work in Progress</a></h1>
+			</div>
+			<div>
+			  <div class="s-module--intro--1v3wl">
+				<div class="s-module--pre--3NC-2">developer's blog by&nbsp;</div>
+
+			  </div>
+			  <div class="s-module--post--LdKLS">
+				<h2 class="title"><a href="/2019-04-22__yarn-upgrade-not-updating-package-json-questionmark/" style="box-shadow: none;">Why Running `yarn upgrade` Does Not Update My `package.json`</a></h2><small>April 22, 2019</small>
+				<p class="excerpt"><span>Why Running   Does Not Update My  Today I wanted to upgrade the dependency of React of one of my projects. So I ran And it seems everyone…</span><a class="s-module--read--3t7Sj" href="/2019-04-22__yarn-upgrade-not-updating-package-json-questionmark/">Read ⟶</a></p>
+			  </div>
+			  <div class="s-module--post--LdKLS">
+				<h2 class="title"><a href="/2019-04-17__making-flow-happy-after-0.85/" style="box-shadow: none;">Making Flow Happy after 0.85</a></h2><small>April 17, 2019</small>
+				<p class="excerpt"><span>Making Flow Happy after 0.85 For the past few weeks I’ve filled my free hours to upgrade our codebase’s dependency of Flow to its latest…</span><a class="s-module--read--3t7Sj" href="/2019-04-17__making-flow-happy-after-0.85/">Read ⟶</a></p>
+			  </div>
+			  <div class="s-module--post--LdKLS">
+				<h2 class="title"><a href="/2019-04-07__reverse-engineering-the-blending-mode-of-gilbert-color/" style="box-shadow: none;">Reverse Engineering the Blending Mode of Gilbert Color</a></h2><small>April 07, 2019</small>
+				<p class="excerpt"><span>Reverse Engineering the Blending Mode of Gilbert Color, and Things Learned I’ve been preparing for my  Talk.CSS  talk about   this week…</span><a class="s-module--read--3t7Sj" href="/2019-04-07__reverse-engineering-the-blending-mode-of-gilbert-color/">Read ⟶</a></p>
+			  </div>
+			  <div class="s-module--post--LdKLS">
+				<h2 class="title"><a href="/2019-03-25__back-to-html-css-javascript/" style="box-shadow: none;">Back to HTML, CSS, and JavaScript and Build My Speaker Site</a></h2><small>March 25, 2019</small>
+				<p class="excerpt"><span>Back to HTML, CSS, and JavaScript Building My Speaker Site Inspired by  Global Diversity CFP Day , and due to an increasing involvement at…</span><a class="s-module--read--3t7Sj" href="/2019-03-25__back-to-html-css-javascript/">Read ⟶</a></p>
+			  </div>
+			  <div class="s-module--post--LdKLS">
+				<h2 class="title"><a href="/2019-03-21__do-you-spam-flex-box-also/" style="box-shadow: none;">Do You Spam Flex Box Also?</a></h2><small>March 21, 2019</small>
+				<p class="excerpt"><span>Do You Spam Flex Box Also? This is  not  a post about how to use flex box. For this aim, you may find the following posts (app) interesting…</span><a class="s-module--read--3t7Sj" href="/2019-03-21__do-you-spam-flex-box-also/">Read ⟶</a></p>
+			  </div>
+			  <div class="s-module--post--LdKLS">
+				<h2 class="title"><a href="/2019-03-10__content-width-determination-with-the-box-model/" style="box-shadow: none;">Content Width Determination with the Box Model</a></h2><small>March 10, 2019</small>
+				<p class="excerpt"><span>Content Width Determination with the Box Model I was working on a this design that contains a few badges aligned like this on a corner.
+	  The…</span><a class="s-module--read--3t7Sj" href="/2019-03-10__content-width-determination-with-the-box-model/">Read ⟶</a></p>
+			  </div>
+			  <div class="s-module--post--LdKLS">
+				<h2 class="title"><a href="/2019-03-08__mix-blend-mode/" style="box-shadow: none;">How I Started Reading `mix-blend-mode` and What They Are Creating with It</a></h2><small>March 08, 2019</small>
+				<p class="excerpt"><span>How I Started Reading   and What They Are Creating with It I was working on  this Dribbble Design  by  Louie Mantia . At my first sight, all…</span><a class="s-module--read--3t7Sj" href="/2019-03-08__mix-blend-mode/">Read ⟶</a></p>
+			  </div>
+			  <div class="s-module--post--LdKL1">
+				<h2 class="title"><a href="/2019-03-07__fixing-connect-flowtype-annotation-after-flow-0.89/" style="box-shadow: none;">Fixing Connect FlowType Annotation after 0.89</a></h2><small>March 07, 2019</small>
+				<p class="excerpt"><span>This’ll be a quick post about how to fix most of the   annotations. Upgrading Flow past 0.85 has been tough.  Flow asks for more required…</span><a class="s-module--read--3t7Sj" href="/2019-03-07__fixing-connect-flowtype-annotation-after-flow-0.89/">Read ⟶</a></p>
+			  </div>
+			  <div class="s-module--post--LdKLS">
+				<h2 class="title"><a href="/2019-03-02__transform-establishes-containing-block-for-descendants/" style="box-shadow: none;">Transform Establishes Containing Block for Descendants</a></h2><small>March 02, 2019</small>
+				<p class="excerpt"><span> Establishes Containing Block for Descendants A problem came up when I was trying to draw a heart using CSS following  this guide . You draw…</span><a class="s-module--read--3t7Sj" href="/2019-03-02__transform-establishes-containing-block-for-descendants/">Read ⟶</a></p>
+			  </div>
+			</div>
+			<footer class="s-module--footer--3LbWM">
+			  <div><span>© 2019 built with ❤</span></div>
+			</footer>
+		  </div>
+	</div>  -->
+
+	<script>
+		function toggle_button(){
+
+			document.getElementById('dark-filter').classList.toggle('enable-darkmode');
+			var x = document.getElementById("dark_mode_button");
+  			if (x.innerHTML === "dark mode") {
+    			x.innerHTML = "light mode";
+  			} else {
+    			x.innerHTML = "dark mode";
+  			}
+		} 
+
+		
+	</script>
+</body>
+</html>
